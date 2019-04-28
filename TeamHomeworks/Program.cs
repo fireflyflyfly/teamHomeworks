@@ -6,8 +6,9 @@ namespace TeamHomeworks
     {
         static void Main(string[] args)
         {
-            ProgramExtentions.Extentions.SquareArea();
+            ProgramExtentions.Extentions.CalculateSquareArea();
             ProgramExtentions.Extentions.CircleArea();
+            ProgramExtentions.Extentions.FigureComparision();
         }
     }
 }
