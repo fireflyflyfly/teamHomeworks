@@ -10,10 +10,10 @@ namespace ProgramExtentions
 
         public static double CalculateSquareArea()
         {
-            Console.WriteLine("Please enter the Length of Side and hit Enter : ");
+            Console.WriteLine("Please enter the length of a side of your square and hit Enter: ");
             squareSide = Convert.ToDouble(Console.ReadLine());
             squareArea = Math.Pow (squareSide, 2);
-            Console.WriteLine("\nArea of Square: " + squareArea);
+            Console.WriteLine("\nArea of Square: " + squareArea + "\nPress Enter again to continue...");
             Console.ReadKey();
             return squareArea;
         }
