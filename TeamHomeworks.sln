@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamHomeworks", "TeamHomeworks\TeamHomeworks.csproj", "{8477FC8B-46F8-47C4-9F49-4DD4BBA03864}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8477FC8B-46F8-47C4-9F49-4DD4BBA03864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8477FC8B-46F8-47C4-9F49-4DD4BBA03864}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8477FC8B-46F8-47C4-9F49-4DD4BBA03864}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8477FC8B-46F8-47C4-9F49-4DD4BBA03864}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
