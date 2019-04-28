@@ -8,7 +8,8 @@ namespace TeamHomeworks
         {
             ProgramExtentions.Extentions.CalculateSquareArea();
             ProgramExtentions.Extentions.CircleArea();
-            ProgramExtentions.Extentions.FigureComparision();
+            ProgramExtentions.Extentions.CircleInYourSquare();
+            ProgramExtentions.Extentions.SquareInYourCircle();
         }
     }
 }

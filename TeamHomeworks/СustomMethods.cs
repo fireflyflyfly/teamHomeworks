@@ -24,15 +24,22 @@ namespace ProgramExtentions
             Console.WriteLine("\nPlease enter the radius of your circle and hit Enter: ");
             circleRadius = double.Parse(Console.ReadLine());
             circleArea = PI * (Math.Pow(circleRadius, 2));
-            Console.WriteLine("The Area of your circle is: {0:0.00}",circleArea);
+            Console.WriteLine("The Area of your circle is: " + circleArea);
             return circleArea;
         }
 
-        public static void FigureComparision() 
+        public static void CircleInYourSquare() 
         {
             if (squareSide >= circleRadius * 2)
-                Console.WriteLine("\nYour circle fits your square!");
+                Console.WriteLine("\nYour circle fits inside your square!");
             else Console.WriteLine("\nYour circle does not fit inside your square.");
+        }
+
+        public static void SquareInYourCircle() 
+        {
+            if (squareSide / Math.Sqrt(2) <= circleRadius)
+                Console.WriteLine("\nYour square fits inside your circle!");
+            else Console.WriteLine("\nYour square does not fit inside your circle.");
         }
 }
 }
