@@ -1,12 +1,13 @@
 ﻿using System;
-
+using ProgramExtentions;
 namespace TeamHomeworks
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ProgramExtentions.Extentions.SquareArea();
+            ProgramExtentions.Extentions.CircleArea();
         }
     }
 }
