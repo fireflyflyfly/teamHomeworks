@@ -1,30 +1,45 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+using System.Globalization;
+
 namespace ProgramExtentions2
 {
     public class Task3
     {
-       public static int rangeStart;
-       public static int rangeFinish;
+       public static string rangeStart;
+       public static string rangeFinish;
        public static List<int> finalArray = new List<int>();
 
         public static void RangeCreation()
         {
             Console.WriteLine("Please enter the first number of your range:");
-            rangeStart = Convert.ToInt16(Console.ReadLine());
-
+            rangeStart = Console.ReadLine();
             Console.WriteLine("\nPlease enter the last number of your range:");
-            rangeFinish = Convert.ToInt16(Console.ReadLine());
+            rangeFinish = Console.ReadLine();
 
-            for (int i = rangeStart; i <= rangeFinish; i++)
-            { 
-                if ((i % 3 == 0) && (i % 5 != 0))
+
+                int x, y;
+                if (int.TryParse(rangeStart, out x) && int.TryParse(rangeFinish, out y)
+                    && (Convert.ToInt32(rangeFinish) - Convert.ToInt32(rangeStart) >= 10))
                 {
-                    finalArray.Add(i);
+                    for (int i = Convert.ToInt32(rangeStart); i <= Convert.ToInt32(rangeFinish); i++)
+                    {
+                        if ((i % 3 == 0) && (i % 5 != 0))
+                        {
+                            finalArray.Add(i);
+                        }
+                    }
+
+                    //finalArray.ForEach(i => Console.WriteLine("{0} ", i));
+                    Console.Write((finalArray).Sum(i => Convert.ToInt32(i)));
                 }
-            }
-            finalArray.ForEach(i => Console.WriteLine("{0} ", i));
+                else
+                {
+                    Console.WriteLine("\nYour range must contain 10 or more values. Only digits are allowed. Please try again.");
+                }
         }
 
     }
