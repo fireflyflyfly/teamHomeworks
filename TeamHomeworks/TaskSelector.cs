@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Linq;
 using ProgramExtentions;
-using ProgramExtentions2;
+using ProgramExtentions3;
+using ProgramExtensions4;
 namespace TaskSelector
 {
     public class TaskRunner
@@ -22,7 +23,11 @@ namespace TaskSelector
                 }
                 else if (Convert.ToInt32(taskNumber) == 3) 
                 {
-                    ProgramExtentions2.Task3.RangeCreation();
+                    ProgramExtentions3.Task3.RangeCreation();
+                }
+                else if (Convert.ToInt32(taskNumber) == 4)
+                {
+                    ProgramExtensions4.Task_4.Reverser();
                 }
                 else 
                 {

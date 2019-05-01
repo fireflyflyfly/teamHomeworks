@@ -1,5 +1,6 @@
 ﻿using System;
-using TaskSelector; 
+using TaskSelector;
+using ProgramExtensions4;
 namespace TeamHomeworks
 {
     class Program
