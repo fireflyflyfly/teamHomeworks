@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using TasksExtenstion;
 using PriorityStuff;
-using ComplexityStuff; 
+using ComplexityStuff;
+using System.Linq;
 namespace ProgramExtentions5_2
 {
     public class Task_5_Custom_Methods
@@ -108,6 +109,41 @@ namespace ProgramExtentions5_2
                     }
                 else { Console.WriteLine("\n Only options 1, 2 and 3 are allowed. Please try again."); }
             }
+         
+         public static void TasksInDays() 
+         {
+            TaskList.Sort((a, b) => -a.TaskPriority.CompareTo(b.TaskPriority));
+
+            for (int i = 0; i < TaskList.Count; i++)
+            {
+                if (TaskList[i].TaskDifficulty == Complexity.Hard)
+                { TaskList[i].time = 4; }
+                else if (TaskList[i].TaskDifficulty == Complexity.Medium)
+                { TaskList[i].time = 2; }
+                else if (TaskList[i].TaskDifficulty == Complexity.Easy)
+                { TaskList[i].time = 1; }
+            }
+
+            Console.WriteLine("\nPlease enter desired amount of days: ");
+            int days = Convert.ToInt32(Console.ReadLine());
+
+            int requiredTime = 0; 
+            Console.WriteLine("\nHere is the list of task you can do in " + days + " day(s).");
+            for (int i = 0; i < TaskList.Count; i++)
+            {
+                if (requiredTime < days * 8) 
+                {
+                    requiredTime = requiredTime + TaskList[i].time;
+
+                    Console.WriteLine(TaskList[i].TaskName);
+                    Console.WriteLine(Convert.ToString(TaskList[i].TaskPriority));
+                    Console.WriteLine(Convert.ToString(TaskList[i].TaskDifficulty));
+                    Console.WriteLine(Convert.ToString(TaskList[i].time));
+                    Console.WriteLine("\n");
+                }
+
+            }
+         }
 
         }
         }

@@ -32,7 +32,10 @@ namespace ProgramExtentions5_1
                             break;
                         case 4:
                             Task_5_Custom_Methods.GetTasksbyPriority();
-                            break; 
+                            break;
+                        case 5:
+                            Task_5_Custom_Methods.TasksInDays();
+                            break;
                         default:
                             Console.WriteLine("\nSelected option does not exist, please try again.");
                             break;

@@ -8,6 +8,9 @@ namespace TasksExtenstion
         public string TaskName { get; set; }
         public Priority TaskPriority { get; set; }
         public Complexity TaskDifficulty { get; set; }
+        public int time { get; set; } = 0;
+        }
     }
-}
+
+
 
