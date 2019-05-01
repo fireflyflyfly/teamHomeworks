@@ -7,8 +7,7 @@ namespace TeamHomeworks
     {
         static void Main(string[] args)
         {
-            //TaskSelector.TaskRunner.TaskLauncher();
-            ProgramExtentions5_1.Task_5.Task5Selector();
+            TaskSelector.TaskRunner.TaskLauncher();
         }
     }
 }

@@ -11,23 +11,28 @@ namespace TaskSelector
         {
             Console.WriteLine("Please enter the number of homework task you want to launch: ");
             string taskNumber = Console.ReadLine();
-            int x; 
-            if (int.TryParse (taskNumber, out x)) 
+            int x;
+            if (int.TryParse(taskNumber, out x))
             {
-                if (Convert.ToInt32 (taskNumber) == 1 || Convert.ToInt32(taskNumber) == 2) 
+                if (Convert.ToInt32(taskNumber) == 1 || Convert.ToInt32(taskNumber) == 2)
                 {
                     ProgramExtentions.Extentions.CalculateSquareArea();
                     ProgramExtentions.Extentions.CircleArea();
                     ProgramExtentions.Extentions.CircleInYourSquare();
                     ProgramExtentions.Extentions.SquareInYourCircle();
                 }
-                else if (Convert.ToInt32(taskNumber) == 3) 
+                else if (Convert.ToInt32(taskNumber) == 3)
                 {
                     ProgramExtentions3.Task3.RangeCreation();
                 }
                 else if (Convert.ToInt32(taskNumber) == 4)
                 {
                     ProgramExtensions4.Task_4.Reverser();
+                }
+                else if (Convert.ToInt32(taskNumber) == 5)
+                { 
+                ProgramExtentions5_1.Task_5.Task5Selector(); 
+                }
                 }
                 else 
                 {
@@ -36,4 +41,4 @@ namespace TaskSelector
             }
         }
     }
-}
+
