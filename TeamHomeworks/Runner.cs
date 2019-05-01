@@ -1,13 +1,14 @@
 ﻿using System;
 using TaskSelector;
-using ProgramExtensions4;
+using ProgramExtentions5_1;
 namespace TeamHomeworks
 {
     class Program
     {
         static void Main(string[] args)
         {
-            TaskSelector.TaskRunner.TaskLauncher();
+            //TaskSelector.TaskRunner.TaskLauncher();
+            ProgramExtentions5_1.Task_5.Task5Selector();
         }
     }
 }
