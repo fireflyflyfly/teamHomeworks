@@ -13,6 +13,6 @@
     <Compile Remove="Tasks_1_&amp;_2.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Task1\" />
+    <Folder Include="Tasks_1&amp;2\" />
   </ItemGroup>
 </Project>
