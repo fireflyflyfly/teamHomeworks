@@ -16,7 +16,7 @@ namespace TaskSelector
             {
                 if (Convert.ToInt32(taskNumber) == 1 || Convert.ToInt32(taskNumber) == 2)
                 {
-                    FigureComparision.CreateFigures();
+                    FigureComparision.CreatAndCompareFigures();
                 }
                 else if (Convert.ToInt32(taskNumber) == 3)
                 {

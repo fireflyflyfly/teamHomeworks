@@ -4,7 +4,7 @@ namespace TeamHomeworks.Task1
     public class FigureComparision
     {
     
-        public static void CreateFigures()
+        public static void CreatAndCompareFigures()
         {
             Circle circle = (Circle)Figure.CreateCircle();
             Square square = (Square)Figure.CreateSquare();
