@@ -5,4 +5,14 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="F1\Class1.cs" />
+    <Compile Remove="EmptyClass.cs" />
+    <Compile Remove="Task_1_2_Circle.cs" />
+    <Compile Remove="Square.cs" />
+    <Compile Remove="Tasks_1_&amp;_2.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Task1\" />
+  </ItemGroup>
 </Project>

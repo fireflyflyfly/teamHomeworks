@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
-using ProgramExtentions;
 using ProgramExtentions3;
 using ProgramExtensions4;
+using TeamHomeworks.Task1;
 namespace TaskSelector
 {
     public class TaskRunner
@@ -16,10 +16,7 @@ namespace TaskSelector
             {
                 if (Convert.ToInt32(taskNumber) == 1 || Convert.ToInt32(taskNumber) == 2)
                 {
-                    ProgramExtentions.Extentions.CalculateSquareArea();
-                    ProgramExtentions.Extentions.CircleArea();
-                    ProgramExtentions.Extentions.CircleInYourSquare();
-                    ProgramExtentions.Extentions.SquareInYourCircle();
+                    FigureComparision.CreateFigures();
                 }
                 else if (Convert.ToInt32(taskNumber) == 3)
                 {
