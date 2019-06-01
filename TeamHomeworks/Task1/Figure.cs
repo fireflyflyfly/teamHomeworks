@@ -24,7 +24,7 @@ namespace TeamHomeworks.Task1
             }
 
             if (i == 0) 
-            {
+            { 
                 x = Randomizer.SetRandomValue();
                 Console.WriteLine("\nYou are out of attempts. The value has been automatically set to :" + x);
             }
