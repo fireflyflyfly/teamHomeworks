@@ -6,9 +6,10 @@ namespace TeamHomeworks.Task1
         public readonly double squareSide;
         public double squareArea;
 
-        public Square(double side) 
+        public Square() 
         {
-            squareSide = side;
+            Console.WriteLine("\nPlease nter the length of the side of your square:");
+            squareSide = GetFigureDimensions();
         }
 
         public override double CalculateArea()
@@ -20,7 +21,7 @@ namespace TeamHomeworks.Task1
 
         public void FitCirleIntoSquare(Circle c) 
         {
-            if (squareSide >= c.circleRadius * 2)
+            if (squareSide >= c.CircleRadius * 2)
             {
                 Console.WriteLine("\nYour circle fits inside your square!");
             }

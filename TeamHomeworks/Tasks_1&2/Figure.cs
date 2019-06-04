@@ -18,7 +18,7 @@ namespace TeamHomeworks.Task1
                 }
                 else 
                 {
-                    Console.WriteLine("\nOnly gigits equal or higer than 1 are allowed. Please try again. You have " + (i-1) + " attempts left.");
+                    Console.WriteLine($"\nOnly gigits equal or higer than 1 are allowed. Please try again. You have {(i-1)} attempts left.");
                     i--; 
                 }
             }
@@ -31,18 +31,16 @@ namespace TeamHomeworks.Task1
             return x;
         }
 
-        public static Figure CreateCircle() 
-        {
-            Console.WriteLine("\nPlease nter the radius of your circle:");
-            Circle circle = new Circle(Figure.GetFigureDimensions());
-            return circle; 
-        }
+        //public static Figure CreateCircle() 
+        //{
+        //    Console.WriteLine("\nPlease nter the radius of your circle:");
+        //    return new Circle(Figure.GetFigureDimensions());
+        //}
 
-        public static Figure CreateSquare() 
-        {
-            Console.WriteLine("\nPlease nter the length of the side of your square:");
-            Square square = new Square(Figure.GetFigureDimensions());
-            return square; 
-        }
+        //public static Figure CreateSquare() 
+        //{
+        //    Console.WriteLine("\nPlease nter the length of the side of your square:");
+        //    return new Square(Figure.GetFigureDimensions());
+        //}
     }
 }

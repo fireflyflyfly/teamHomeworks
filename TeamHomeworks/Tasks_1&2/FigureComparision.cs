@@ -6,8 +6,8 @@ namespace TeamHomeworks.Task1
     
         public static void CreatAndCompareFigures()
         {
-            Circle circle = (Circle)Figure.CreateCircle();
-            Square square = (Square)Figure.CreateSquare();
+            Circle circle = new Circle();
+            Square square = new Square();
 
             circle.CalculateArea();
             square.CalculateArea();
