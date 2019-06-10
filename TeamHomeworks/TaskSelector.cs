@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Linq;
-using ProgramExtentions3;
-using ProgramExtensions4;
 using TeamHomeworks.Task1;
+using TeamHomeworks.Task_3;
 namespace TaskSelector
 {
     public class TaskRunner
@@ -20,7 +18,7 @@ namespace TaskSelector
                 }
                 else if (Convert.ToInt32(taskNumber) == 3)
                 {
-                    ProgramExtentions3.Task3.RangeCreation();
+                    Task3Runner.RunTask3();  
                 }
                 else if (Convert.ToInt32(taskNumber) == 4)
                 {
