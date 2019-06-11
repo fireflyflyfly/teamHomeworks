@@ -24,7 +24,6 @@ namespace TeamHomeworks.Task_4
         }
 
         //approach #2
-
         public static void PalindromeCheck()
         {
             CompareStrings(CroppString());
@@ -34,7 +33,9 @@ namespace TeamHomeworks.Task_4
         public static char[] CroppString()
         {
             Console.WriteLine("\nPlease enter a word or a phrase:");
-            char[] characters = Regex.Replace(Console.ReadLine().ToLower(), @"[^a-zA-Z""]+|\s+", " ").Trim().ToCharArray();
+
+            string str = Regex.Replace(Console.ReadLine().ToLower(), @"[^a-zA-Z\s]", "").Trim();
+            char[] characters = Regex.Replace(str, @"\s+", "").ToCharArray();
 
             foreach (char ch in characters)
             {
