@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace ProgramExtensions4
+namespace TeamHomeworks.Task_4
 {
     public class Task_4
     {
@@ -34,11 +34,11 @@ namespace ProgramExtensions4
         public static char[] CroppString()
         {
             Console.WriteLine("\nPlease enter a word or a phrase:");
-            char[] characters = Regex.Replace(Console.ReadLine().ToLower(), @"[^a-zA-Z\""]\s+", " ").ToCharArray();
+            char[] characters = Regex.Replace(Console.ReadLine().ToLower(), @"[^a-zA-Z""]+|\s+", " ").Trim().ToCharArray();
 
-            foreach (char ch in characters) 
-            { 
-                Console.WriteLine(ch.ToString()); 
+            foreach (char ch in characters)
+            {
+                Console.WriteLine(ch.ToString());
             }
             return characters;
         }

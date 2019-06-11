@@ -6,23 +6,21 @@ namespace TeamHomeworks.Task_3
 {
     public class Range
     {
-        private static string rangeStart;
-        private static string rangeFinish;
+        private static int rangeStart;
+        private static int rangeFinish;
 
-        //sets first and last values of the range
+        //sets first and last values of the range.
         public static void SetRangeBoundaries()
         {
-            int x, y;
             while (true)
             {
                 Console.WriteLine("Please enter the first number of your range:");
-                rangeStart = Console.ReadLine();
+                rangeStart = SetRangeValue();
 
                 Console.WriteLine("\nPlease enter the last number of your range:");
-                rangeFinish = Console.ReadLine();
+                rangeFinish = SetRangeValue();
 
-                if (int.TryParse(rangeStart, out x) && int.TryParse(rangeFinish, out y)
-                    && (Convert.ToInt32(rangeFinish) - Convert.ToInt32(rangeStart) >= 9))
+                if ((rangeFinish - rangeStart >= 9))
                     break;
 
                 else
@@ -32,7 +30,24 @@ namespace TeamHomeworks.Task_3
             }
         }
 
-        //fills the array with values dividable by 3 and not dividable by 5
+        //general method to get a correct int.
+        public static int SetRangeValue()
+        {
+            int x;
+            while (true)
+            {
+                if (int.TryParse(Console.ReadLine(), out x))
+                    break;
+
+                else
+                {
+                    Console.WriteLine("\nYour range must contain 10 or more values. Only digits are allowed. Please, try again.");
+                }
+            }
+            return x;
+        }
+
+        //fills the array with values dividable by 3 and not dividable by 5.
         public static List<int> FillRange()
         {
             List<int> finalArray = new List<int>();
@@ -47,22 +62,12 @@ namespace TeamHomeworks.Task_3
             return finalArray;
         }
 
-        // just for testing purposes, prints all array values 
-        //public void GetFinalValues() 
-        //{
-        //    finalArray.ForEach(i => Console.WriteLine("{0}", i));
-        //}
-
-        //prints the sum of all array values
+        //prints the sum of all array values.
         public static void SumArrayValues(List<int> array) 
         {
-           int sum = (array).Sum(i => Convert.ToInt32(i));
+           int sum = array.Sum(i => Convert.ToInt32(i));
             Console.WriteLine("\nThe sum of values dividable by 3 and not dividable by 5 in your array is: " + sum);
         }
-
-
-
-
     }
 }
 
