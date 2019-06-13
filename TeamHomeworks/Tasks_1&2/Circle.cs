@@ -1,37 +1,37 @@
 ﻿using System;
-namespace TeamHomeworks.Task1
+namespace TeamHomeworks.Task_1_2
 {
     public class Circle : Figure
     {
-        public readonly double CircleRadius;
-        public double circleArea;
-
-        public Circle() 
+        private double _circleRadius;
+        public double CircleRadius
         {
-            Console.WriteLine("\nPlease nter the radius of your circle:");
-            CircleRadius = GetFigureDimensions();
+            get
+            {
+                return _circleRadius;
+            }
 
+            set
+
+            {
+                _circleRadius = value;
+            }
+
+
+        }
+
+
+        //use in setter 
+        public Circle(double radius) 
+        {
+            CircleRadius = radius;
         }
 
         public override double CalculateArea()
         {
-            circleArea = Math.Round((PI * (Math.Pow(CircleRadius, 2))), 2);
-            Console.WriteLine("The area of your circle is: " + circleArea);
-            return circleArea;
-        }
-
-        public void FitSquareIntoCircle(Square s)
-        {
-            if (s.squareSide / Math.Sqrt(2) <= CircleRadius)
-            {
-                Console.WriteLine("\nYour square fits inside your circle!");
-            }
-
-            else
-            {
-                Console.WriteLine("\nYour square does not fit inside your circle.");
-            }
-
+            area = Math.Round((PI * (Math.Pow(CircleRadius, 2))), 2);
+            Console.WriteLine("The area of your circle is: " + area);
+            return area;
         }
     }
 }

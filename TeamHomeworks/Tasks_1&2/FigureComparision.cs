@@ -1,19 +1,23 @@
 ﻿using System;
-namespace TeamHomeworks.Task1
+namespace TeamHomeworks.Task_1_2
 {
     public class FigureComparision
     {
     
         public static void CreatAndCompareFigures()
         {
-            Circle circle = new Circle();
-            Square square = new Square();
+            Console.WriteLine("\nPlease enter the radius of your circle:");
+            Circle circle = new Circle(Helpers.GetFigureDimensions());
+
+            Console.WriteLine("\nPlease nter the length of the side of your square:");
+            Square square = new Square(Helpers.GetFigureDimensions());
 
             circle.CalculateArea();
             square.CalculateArea();
 
-           circle.FitSquareIntoCircle(square);
-           square.FitCirleIntoSquare(circle);
+            Helpers.FitSquareIntoCircle(square, circle);
+            Helpers.FitCirleIntoSquare(circle, square);
+
         }
 
     }

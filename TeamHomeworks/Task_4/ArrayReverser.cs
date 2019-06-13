@@ -13,7 +13,7 @@ namespace TeamHomeworks.Task_4
             Console.WriteLine("Please enter your word: ");
             string initialString = Console.ReadLine();
             char[] characters = initialString.ToCharArray();
-            if (characters.SequenceEqual(characters.Reverse()) == true)
+            if (characters.SequenceEqual(characters.Reverse()))
             {
                 Console.WriteLine("\nYour word is a palindrome :)");
             }
@@ -34,7 +34,7 @@ namespace TeamHomeworks.Task_4
         {
             Console.WriteLine("\nPlease enter a word or a phrase:");
 
-            string str = Regex.Replace(Console.ReadLine().ToLower(), @"[^a-zA-Z\s]", "").Trim();
+            string str = Regex.Replace(Console.ReadLine().ToLower(), @"[^a-zA-Z0-9\s]", "").Trim();
             char[] characters = Regex.Replace(str, @"\s+", "").ToCharArray();
 
             foreach (char ch in characters)

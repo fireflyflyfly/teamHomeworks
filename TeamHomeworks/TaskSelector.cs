@@ -1,5 +1,5 @@
 ﻿using System;
-using TeamHomeworks.Task1;
+using TeamHomeworks.Task_1_2;
 using TeamHomeworks.Task_3;
 using TeamHomeworks.Task_4;
 namespace TaskSelector
@@ -23,6 +23,7 @@ namespace TaskSelector
                 }
                 else if (Convert.ToInt32(taskNumber) == 4)
                 {
+                    //Task_4.Reverse();
                     Task_4.PalindromeCheck();
                 }
                 else if (Convert.ToInt32(taskNumber) == 5)

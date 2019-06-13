@@ -1,5 +1,5 @@
 ﻿using System;
-namespace TeamHomeworks.Task1
+namespace TeamHomeworks.Task_1_2
 {
     public class Randomizer
     {
