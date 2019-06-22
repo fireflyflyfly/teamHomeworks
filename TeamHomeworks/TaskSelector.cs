@@ -2,6 +2,7 @@
 using TeamHomeworks.Task_1_2;
 using TeamHomeworks.Task_3;
 using TeamHomeworks.Task_4;
+using TeamHomeworks.Task_5;
 namespace TaskSelector
 {
     public class TaskRunner
@@ -27,8 +28,8 @@ namespace TaskSelector
                     Task_4.PalindromeCheck();
                 }
                 else if (Convert.ToInt32(taskNumber) == 5)
-                { 
-                ProgramExtentions5_1.Task_5.Task5Selector(); 
+                {
+                    TaskControl.Task5Selector(); 
                 }
                 }
                 else 

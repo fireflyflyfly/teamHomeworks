@@ -1,18 +1,18 @@
 ﻿using System;
-namespace ComplexityStuff
+namespace TeamHomeworks.Task_5
 {
-    public enum Complexity 
-    { 
-        Hard, 
-        Medium, 
+    public enum Complexities
+    {
+        Hard,
+        Medium,
         Easy
     }
 
-    public class Task_5_Complexity
+    public class Complexity
     {
-        public static Complexity SetComplexity()
+        public static Complexities SetComplexity()
         {
-            while (true) 
+            while (true)
             {
                 Console.WriteLine("\nPlease chose your rask complexity (1 - hard, 2 - medium, 3 - easy): ");
 
@@ -22,11 +22,11 @@ namespace ComplexityStuff
                     switch (number)
                     {
                         case 1:
-                            return Complexity.Hard;
+                            return Complexities.Hard;
                         case 2:
-                            return Complexity.Medium;
+                            return Complexities.Medium;
                         case 3:
-                            return Complexity.Easy;
+                            return Complexities.Easy;
                         default:
                             Console.WriteLine("\nComplexity you entered does not exist, try again.");
                             break;
@@ -40,4 +40,3 @@ namespace ComplexityStuff
         }
     }
 }
-

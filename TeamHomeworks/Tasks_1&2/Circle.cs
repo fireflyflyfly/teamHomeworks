@@ -12,12 +12,9 @@ namespace TeamHomeworks.Task_1_2
             }
 
             set
-
             {
                 _circleRadius = value;
             }
-
-
         }
 
 

@@ -3,13 +3,15 @@ namespace TeamHomeworks.Task_1_2
 {
     public class Helpers
     {
+
+        // gets a validated double from console input. 
         public static double GetFigureDimensions()
         {
             int i = 3;
             double x = 0;
             while (i > 0)
             {
-                if (double.TryParse(Console.ReadLine(), out x))
+                if (double.TryParse(Console.ReadLine(), out x) && x > 0)
                 {
                     break;
                 }
@@ -28,6 +30,7 @@ namespace TeamHomeworks.Task_1_2
             return x;
         }
 
+        //
         public static void FitSquareIntoCircle(Square square, Circle circle)
         {
             if (square.SquareSide / Math.Sqrt(2) <= circle.CircleRadius)

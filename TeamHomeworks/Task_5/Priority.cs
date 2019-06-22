@@ -1,17 +1,17 @@
 ﻿using System;
-namespace PriorityStuff
+namespace TeamHomeworks.Task_5
 {
-        public enum Priority
-        {
-            Low,
-            Medium,
-            High
-        }
 
-    public class Task_5_Priority
+    public enum Priorities
     {
+        Low,
+        Medium,
+        High
+    }
 
-        public static Priority SetPriority() 
+    public class Priority
+    {
+        public static Priorities SetPriority()
         {
             while (true)
             {
@@ -23,11 +23,11 @@ namespace PriorityStuff
                     switch (number)
                     {
                         case 1:
-                            return Priority.High;
+                            return Priorities.High;
                         case 2:
-                            return Priority.Medium;
+                            return Priorities.Medium;
                         case 3:
-                            return Priority.Low;
+                            return Priorities.Low;
                         default:
                             Console.WriteLine("\nPriority you entered does not exist, try again");
                             break;
