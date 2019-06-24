@@ -6,18 +6,23 @@ namespace TeamHomeworks.Task_7
 {
     public class CountriesDictionary
     {
-        public static void GetDictionary() 
+        public static void GetDictionary()
         {
             Dictionary<int, string> CountriesDic = new Dictionary<int, string>();
-            string[] lines = File.ReadAllLines(@"/Users/yegorabramenkov/Documents/VisualStudiFiles/CountryList.txt");
-            foreach (string country in lines) 
+            string[] lines = File.ReadAllLines(@"/Users/yegorabramenkov/Documents/VisualStudiFiles/CountriesList2.txt");
+            int i = 1;
+
+            foreach (string country in lines)
             {
-                int i = 1; 
                 CountriesDic.Add(i, country);
                 i++;
-
-                Console.WriteLine(CountriesDic[i]);
             }
+
+            foreach (KeyValuePair<int, string> kvp in CountriesDic)
+            {
+                Console.WriteLine("{0}: {1}", kvp.Key, kvp.Value);
+            }
+
         }
     }
 }

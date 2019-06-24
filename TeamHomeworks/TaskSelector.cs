@@ -3,6 +3,7 @@ using TeamHomeworks.Task_1_2;
 using TeamHomeworks.Task_3;
 using TeamHomeworks.Task_4;
 using TeamHomeworks.Task_5;
+using TeamHomeworks.Task_7;
 namespace TaskSelector
 {
     public class TaskRunner
@@ -30,6 +31,10 @@ namespace TaskSelector
                 else if (Convert.ToInt32(taskNumber) == 5)
                 {
                     TaskControl.Task5Selector(); 
+                }
+                else if (Convert.ToInt16 (taskNumber) == 7) 
+                {
+                    CountriesDictionary.GetDictionary();
                 }
                 }
                 else 
