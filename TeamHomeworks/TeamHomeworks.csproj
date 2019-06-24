@@ -17,5 +17,6 @@
     <Folder Include="Task_3\" />
     <Folder Include="Task_4\" />
     <Folder Include="Task_5\" />
+    <Folder Include="Task_7\" />
   </ItemGroup>
 </Project>

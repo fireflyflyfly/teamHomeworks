@@ -109,16 +109,6 @@ namespace TeamHomeworks.Task_5
         {
             TaskList.Sort((a, b) => -a.TaskPriority.CompareTo(b.TaskPriority));
 
-            for (int i = 0; i < TaskList.Count; i++)
-            {
-                if (TaskList[i].TaskDifficulty == Complexities.Hard)
-                { TaskList[i].time = 4; }
-                else if (TaskList[i].TaskDifficulty == Complexities.Medium)
-                { TaskList[i].time = 2; }
-                else if (TaskList[i].TaskDifficulty == Complexities.Easy)
-                { TaskList[i].time = 1; }
-            }
-
             Console.WriteLine("\nPlease enter desired amount of days: ");
             int days = Convert.ToInt32(Console.ReadLine());
 
@@ -128,12 +118,12 @@ namespace TeamHomeworks.Task_5
             {
                 if (requiredTime < days * 8)
                 {
-                    requiredTime = requiredTime + TaskList[i].time;
+                    requiredTime = requiredTime + TaskList[i].Time;
 
                     Console.WriteLine(TaskList[i].TaskName);
                     Console.WriteLine(Convert.ToString(TaskList[i].TaskPriority));
                     Console.WriteLine(Convert.ToString(TaskList[i].TaskDifficulty));
-                    Console.WriteLine(Convert.ToString(TaskList[i].time));
+                    Console.WriteLine(Convert.ToString(TaskList[i].Time));
                     Console.WriteLine("\n");
                 }
 
