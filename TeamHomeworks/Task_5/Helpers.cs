@@ -6,6 +6,7 @@ namespace TeamHomeworks.Task_5
     {
         public static List<Task> TaskList = new List<Task>();
 
+        // Adds a single task to Task list. 
         public static void CreateTaskList()
         {
             Console.WriteLine("\nPlease enter the name of your task: ");
@@ -21,6 +22,7 @@ namespace TeamHomeworks.Task_5
             });
         }
 
+        // Shows a list of all existing tasks. 
         public static void GetTasksList()
         {
             for (int i = 0; i < TaskList.Count; i++)
@@ -32,6 +34,7 @@ namespace TeamHomeworks.Task_5
             }
         }
 
+        // Shows the amount of time required to complete all existing tasks. 
         public static void GetTime()
         {
             int timeAmount = 0;
@@ -51,12 +54,13 @@ namespace TeamHomeworks.Task_5
                     timeAmount = timeAmount + 1;
                 }
             }
-            Console.WriteLine("\nThe amount of time you need for your tasks is: " + timeAmount);
+            Console.WriteLine("\nThe amount of time you need for your tasks is: " + timeAmount + " hours.");
         }
 
+        // Shows a list of tasks grouped by priority. 
         public static void GetTasksbyPriority()
         {
-            Console.WriteLine("\nPlease enter the priority to sort tasks by (1 - high, 2 - medium, 3 - low):");
+            Console.WriteLine("\nPlease enter the priority to filter tasks by (1 - high, 2 - medium, 3 - low):");
 
             int number;
             if (int.TryParse(Console.ReadLine(), out number))
@@ -105,6 +109,8 @@ namespace TeamHomeworks.Task_5
             else { Console.WriteLine("\n Only options 1, 2 and 3 are allowed. Please try again."); }
         }
 
+
+        // Shows how many tasks can be done in X amount of days based on priorities of existing tasks.
         public static void TasksInDays()
         {
             TaskList.Sort((a, b) => -a.TaskPriority.CompareTo(b.TaskPriority));
