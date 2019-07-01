@@ -1,18 +1,12 @@
 ﻿using System;
 namespace TeamHomeworks.Task_5
 {
-    public enum Complexities
-    {
-        Hard,
-        Medium,
-        Easy
-    }
-
     public class Complexity
     {
         public static Complexities SetComplexity()
         {
-            while (true)
+            int attempts = 3;
+            while (attempts != 0)
             {
                 Console.WriteLine("\nPlease chose your rask complexity (1 - hard, 2 - medium, 3 - easy): ");
 
@@ -27,16 +21,20 @@ namespace TeamHomeworks.Task_5
                             return Complexities.Medium;
                         case 3:
                             return Complexities.Easy;
-                        default:
-                            Console.WriteLine("\nComplexity you entered does not exist, try again.");
-                            break;
                     }
                 }
                 else
                 {
                     Console.WriteLine("\nOnly digits are allowed, please try again.");
+                    attempts--; 
                 }
             }
+
+            if (attempts == 0)
+            {
+                Console.WriteLine("\nYou are out of attempts, task complexity was automatically set to Easy.");
+            }
+            return Complexities.Easy;
         }
     }
 }

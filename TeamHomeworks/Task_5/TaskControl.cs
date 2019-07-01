@@ -14,25 +14,24 @@ namespace TeamHomeworks.Task_5
                         "\nEnter 5 to see how many tasks you can do in selected amount of days.");
 
                     int userSelection;
-
                     if (int.TryParse(Console.ReadLine(), out userSelection))
                     {
                         switch (userSelection)
                         {
                             case 1:
-                                Helpers.CreateTaskList();
+                                TaskOperations.CreateTaskList();
                                 break;
                             case 2:
-                               Helpers.GetTasksList();
+                               TaskOperations.GetTasksList();
                                 break;
                             case 3:
-                                Helpers.GetTime();
+                                TaskOperations.GetTime();
                                 break;
                             case 4:
-                                Helpers.GetTasksbyPriority();
+                                TaskOperations.GetTasksbyPriority();
                                 break;
                             case 5:
-                                Helpers.TasksInDays();
+                                TaskOperations.TasksInDays();
                                 break;
                             default:
                                 Console.WriteLine("\nSelected option does not exist, please try again.");
@@ -42,7 +41,6 @@ namespace TeamHomeworks.Task_5
                     else
                     {
                         Console.WriteLine("\nOnly digits are allowed, please try again.");
-
                     }
                 }
             }

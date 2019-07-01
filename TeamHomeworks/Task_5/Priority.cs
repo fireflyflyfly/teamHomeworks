@@ -1,19 +1,12 @@
 ﻿using System;
 namespace TeamHomeworks.Task_5
 {
-
-    public enum Priorities
-    {
-        Low,
-        Medium,
-        High
-    }
-
     public class Priority
     {
         public static Priorities SetPriority()
         {
-            while (true)
+            int attempts = 3;
+            while (attempts != 0)
             {
                 Console.WriteLine("\nPlease enter your task priority (1 - high, 2- medium, 3 - low): ");
 
@@ -36,8 +29,14 @@ namespace TeamHomeworks.Task_5
                 else
                 {
                     Console.WriteLine("\nOnly digits are allowed, please try again.");
+                    attempts--;
                 }
             }
+            if (attempts == 0)
+            {
+                Console.WriteLine("\nYou are out of attempts, task priority was automatically set to Low.");
+            }
+            return Priorities.Low;
         }
     }
 }
