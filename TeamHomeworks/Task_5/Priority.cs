@@ -1,9 +1,9 @@
 ﻿using System;
 namespace TeamHomeworks.Task_5
 {
-    public class Priority
+    public class PriorityHelper
     {
-        public static Priorities SetPriority()
+        public static Priority SetPriority()
         {
             int attempts = 3;
             while (attempts != 0)
@@ -16,11 +16,11 @@ namespace TeamHomeworks.Task_5
                     switch (number)
                     {
                         case 1:
-                            return Priorities.High;
+                            return Priority.High;
                         case 2:
-                            return Priorities.Medium;
+                            return Priority.Medium;
                         case 3:
-                            return Priorities.Low;
+                            return Priority.Low;
                         default:
                             Console.WriteLine("\nPriority you entered does not exist, try again");
                             break;
@@ -36,7 +36,7 @@ namespace TeamHomeworks.Task_5
             {
                 Console.WriteLine("\nYou are out of attempts, task priority was automatically set to Low.");
             }
-            return Priorities.Low;
+            return Priority.Low;
         }
     }
 }

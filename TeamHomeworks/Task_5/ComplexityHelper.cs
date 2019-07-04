@@ -1,9 +1,9 @@
 ﻿using System;
 namespace TeamHomeworks.Task_5
 {
-    public class Complexity
+    public class ComplexityHelper
     {
-        public static Complexities SetComplexity()
+        public static Complexity SetComplexity()
         {
             int attempts = 3;
             while (attempts != 0)
@@ -16,11 +16,11 @@ namespace TeamHomeworks.Task_5
                     switch (number)
                     {
                         case 1:
-                            return Complexities.Hard;
+                            return Complexity.Hard;
                         case 2:
-                            return Complexities.Medium;
+                            return Complexity.Medium;
                         case 3:
-                            return Complexities.Easy;
+                            return Complexity.Easy;
                     }
                 }
                 else
@@ -34,7 +34,7 @@ namespace TeamHomeworks.Task_5
             {
                 Console.WriteLine("\nYou are out of attempts, task complexity was automatically set to Easy.");
             }
-            return Complexities.Easy;
+            return Complexity.Easy;
         }
     }
 }

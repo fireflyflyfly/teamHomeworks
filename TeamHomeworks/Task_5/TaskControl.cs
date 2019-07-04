@@ -34,6 +34,9 @@ namespace TeamHomeworks.Task_5
                         case 5:
                             TaskOperations.TasksInDays();
                             break;
+                        case 6:
+                            TaskOperations.FillWithTasks();
+                            break;
                     }
                 }
                 else

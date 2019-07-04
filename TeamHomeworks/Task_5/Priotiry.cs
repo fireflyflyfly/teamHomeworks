@@ -1,10 +1,10 @@
 ﻿using System;
 namespace TeamHomeworks.Task_5
 {
-    public enum Complexities
+    public enum Priority
     {
-        Hard = 4,
+        Low = 3,
         Medium = 2,
-        Easy = 1
+        High = 1
     }
 }
