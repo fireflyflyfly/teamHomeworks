@@ -47,7 +47,7 @@ namespace TeamHomeworks.Task_5
             Console.WriteLine("\nThe amount of time you need for your tasks is: " + timeAmount + " hours.");
         }
 
-        // Shows a list of tasks grouped by priority. SORT THIS STUFF BY COMPLEXITY, use linq.
+        // Shows a list of tasks grouped by priority and sorted by complexity.
         public static void GetTasksbyPriority()
         {
             Console.WriteLine("\nPlease enter the priority to filter tasks by (1 - high, 2 - medium, 3 - low):");
@@ -77,7 +77,7 @@ namespace TeamHomeworks.Task_5
                         break;
 
                     case 3:
-                        List<Task> LowPrioTasks = TaskList.Where(t => t.TaskPriority.Equals(Priorities.High)).ToList();
+                        List<Task> LowPrioTasks = TaskList.Where(t => t.TaskPriority.Equals(Priorities.Low)).ToList();
                         LowPrioTasks.Sort((x, y) => -x.TaskDifficulty.CompareTo(y.TaskDifficulty));
 
                         LowPrioTasks.ForEach(task =>
@@ -115,6 +115,8 @@ namespace TeamHomeworks.Task_5
             }
         }
 
+
+        // A method to print all info about a task. 
         private static void PrintTaskInfo(Task task)
         {
             Console.WriteLine(task.TaskName);
