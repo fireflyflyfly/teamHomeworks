@@ -29,10 +29,7 @@ namespace TeamHomeworks.Task_5
         {
             TaskList.ForEach(task =>
             {
-                Console.WriteLine(task.TaskName);
-                Console.WriteLine(Convert.ToString(task.Priority));
-                Console.WriteLine(Convert.ToString(task.Complexity));
-                Console.WriteLine("\n");
+                PrintTaskInfo(task);
             });
         }
 

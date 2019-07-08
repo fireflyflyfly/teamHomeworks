@@ -34,7 +34,12 @@ namespace TaskSelector
                 }
                 else if (Convert.ToInt16 (taskNumber) == 7) 
                 {
-                    CountriesDictionary.GetDictionary();
+                    DictioanryHelper.FillDictionary();
+                    DictioanryHelper.AddNewCountryToDictionary();
+                    DictioanryHelper.AddNewCountryToFile();
+                    DictioanryHelper.SetTelenorSupported();
+                    DictioanryHelper.PrintAllNonSupportedCountries();
+                    DictioanryHelper.SaveChangesToFile();
                 }
                 }
                 else 
