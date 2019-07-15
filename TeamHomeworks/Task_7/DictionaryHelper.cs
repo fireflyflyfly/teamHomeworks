@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace TeamHomeworks.Task_7
 {
@@ -12,25 +13,24 @@ namespace TeamHomeworks.Task_7
         // Creates and fills a dictionary with countries and their info.
         public static void FillDictionary()
         {
-            string[] tempCountries = File.ReadAllLines(@"/Users/yegorabramenkov/Documents/VisualStudiFiles/CountriesList2.txt");
-            var interimCountries = new List<String>(tempCountries);
+            List<string> interimCountries = File.ReadAllLines(@"/Users/yegorabramenkov/Documents/VisualStudiFiles/CountriesList2.txt")
+                .Where(x => !string.IsNullOrEmpty(x)).ToList();        
 
             int countryIndex = 1;
-            int i = 0;
-            interimCountries.ForEach(c =>
+            Regex reg = new Regex(@"[\w ]+");
+            interimCountries.ForEach(countryName =>
             {
-                Country country = new Country();
-                country.CountryName = interimCountries[i];
-                CountriesD.Add(countryIndex, country);
+                string croppedCountryName = Regex.Replace(reg.Match(countryName).Value.ToLower().Trim(), @"\s{2,}", "");
+                CountriesD.Add(countryIndex, new Country(croppedCountryName));
                 countryIndex++;
-                i++;
             });
         }
 
+        //sort this one first by key
         public static void AddNewCountryToDictionary()
         {
-            Country country = new Country();
-            country.CountryName = "Ukraine";
+            CountriesD.OrderBy(k => k.Key);
+            Country country = new Country("Ukraine");
             int key = CountriesD.Last().Key + 1;
             CountriesD.Add(key, country);
         }
@@ -40,19 +40,21 @@ namespace TeamHomeworks.Task_7
             File.AppendAllText(@"/Users/yegorabramenkov/Documents/VisualStudiFiles/CountriesList2.txt", "\nUkraine");
         }
 
+
+        //get list of telenorsupported countries and then search it for something
         public static void SetTelenorSupported()
         {
-            int key1 = CountriesD.FirstOrDefault(x => x.Value.CountryName.Equals("Denmark")).Key;
-            int key2 = CountriesD.FirstOrDefault(x => x.Value.CountryName.Equals("Hungary")).Key;
+            int key1 = CountriesD.First(x => x.Value.CountryName.Equals("denmark")).Key;
+            int key2 = CountriesD.First(x => x.Value.CountryName.Equals("hungary")).Key;
             CountriesD[key1].IsTelenorSupported = Convert.ToBoolean(1);
             CountriesD[key2].IsTelenorSupported = Convert.ToBoolean(1);
         }
 
         public static void PrintAllNonSupportedCountries()
         {
-            foreach(KeyValuePair<int, Country> kvp in CountriesD.Where(x => x.Value.IsTelenorSupported == false))
+            foreach (var kvp in CountriesD.Where(x => !x.Value.IsTelenorSupported))
             {
-                Console.WriteLine("{0}, {1}", kvp.Key, kvp.Value.CountryName);
+                Console.WriteLine($"{kvp.Key}, {kvp.Value.CountryName}, {kvp.Value.IsTelenorSupported}");
             }
         }
 
@@ -60,23 +62,17 @@ namespace TeamHomeworks.Task_7
         {
 
             string path = (@"/Users/yegorabramenkov/Documents/VisualStudiFiles/FinalCountryList.txt");
+            StreamWriter file = new StreamWriter(path);
             if (!File.Exists(path))
             {
-                File.Create(path);
-                using (StreamWriter file = new StreamWriter("/Users/yegorabramenkov/Documents/VisualStudiFiles/FinalCountryList.txt"))
-                    foreach (KeyValuePair<int, Country> kvp in CountriesD)
-                    {
-                        file.WriteLine("{0}, {1}, {2}", kvp.Key, kvp.Value.CountryName, kvp.Value.IsTelenorSupported);
-                    }
+                File.Create(path);  
             }
-            else if (File.Exists(path))
+            
+            foreach (var kvp in CountriesD)
             {
-                using (StreamWriter file = new StreamWriter("/Users/yegorabramenkov/Documents/VisualStudiFiles/FinalCountryList.txt"))
-                    foreach (KeyValuePair<int, Country> kvp in CountriesD)
-                    {
-                        file.WriteLine("{0}, {1}, {2}", kvp.Key, kvp.Value.CountryName, kvp.Value.IsTelenorSupported);
-                    }
+                file.WriteLine($"{kvp.Key}, {kvp.Value.CountryName}, {kvp.Value.IsTelenorSupported}");
             }
+            file.Close();
         }
     }
 }

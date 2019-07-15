@@ -5,5 +5,10 @@ namespace TeamHomeworks.Task_7
     {
         public bool IsTelenorSupported;
         public string CountryName;
+
+        public Country(string countryName)
+        {
+            CountryName = countryName;
+        }
     }
 }

@@ -86,11 +86,16 @@ namespace TeamHomeworks.Task_5
         // A method to print all info about a task. 
         private static void PrintTaskInfo(Task task)
         {
+            var e = task.Priority.ToString();
+            var t = (int)task.Complexity;
             Console.WriteLine(task.TaskName);
             Console.WriteLine(Convert.ToString(task.Priority));
             Console.WriteLine(Convert.ToString(task.Complexity));
             Console.WriteLine(Convert.ToInt32(task.Complexity));
             Console.WriteLine("\n");
+
+            Console.WriteLine("\n" + System.Environment.NewLine);
+
         }
 
         public static void FillWithTasks()
