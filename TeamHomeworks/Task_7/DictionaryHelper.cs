@@ -54,7 +54,7 @@ namespace TeamHomeworks.Task_7
         {
             foreach (var kvp in CountriesD.Where(x => !x.Value.IsTelenorSupported))
             {
-                Console.WriteLine($"{kvp.Key}, {kvp.Value.CountryName}, {kvp.Value.IsTelenorSupported}");
+                Console.WriteLine($"{kvp.Key}, {kvp.Value.CountryName}, {kvp.Value.IsTelenorSupported.ToString().ToLower()}");
             }
         }
 
@@ -70,7 +70,7 @@ namespace TeamHomeworks.Task_7
             
             foreach (var kvp in CountriesD)
             {
-                file.WriteLine($"{kvp.Key}, {kvp.Value.CountryName}, {kvp.Value.IsTelenorSupported}");
+                file.WriteLine($"{kvp.Key}, {kvp.Value.CountryName}, {kvp.Value.IsTelenorSupported.ToString().ToLower()}");
             }
             file.Close();
         }

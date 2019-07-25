@@ -1,0 +1,61 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/yegorabramenkov/Projects/TeamHomeworks/TeamHomeworks/TeamHomeworks.csproj": {}
+  },
+  "projects": {
+    "/Users/yegorabramenkov/Projects/TeamHomeworks/TeamHomeworks/TeamHomeworks.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/yegorabramenkov/Projects/TeamHomeworks/TeamHomeworks/TeamHomeworks.csproj",
+        "projectName": "TeamHomeworks",
+        "projectPath": "/Users/yegorabramenkov/Projects/TeamHomeworks/TeamHomeworks/TeamHomeworks.csproj",
+        "packagesPath": "/Users/yegorabramenkov/.nuget/packages/",
+        "outputPath": "/Users/yegorabramenkov/Projects/TeamHomeworks/TeamHomeworks/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/yegorabramenkov/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
