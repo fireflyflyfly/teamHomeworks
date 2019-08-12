@@ -50,6 +50,7 @@ namespace TeamHomeworks.Task_5
             Console.WriteLine("\nPlease enter the priority to filter tasks by (1 - high, 2 - medium, 3 - low):");
             var isParsed = int.TryParse(Console.ReadLine(), out int number1);
             Priority priority = (Priority)number1;
+
             var list = new List<Task>();
             list = TaskList.Where(t => t.Priority.Equals(priority)).ToList();
             list.Sort((x, y) => -x.Complexity.CompareTo(y.Complexity));

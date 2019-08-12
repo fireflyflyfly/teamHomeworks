@@ -11,6 +11,7 @@
     <Compile Remove="Task_1_2_Circle.cs" />
     <Compile Remove="Square.cs" />
     <Compile Remove="Tasks_1_&amp;_2.cs" />
+    <Compile Remove="Task_6\ColourAttributes.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Tasks_1&amp;2\" />
@@ -18,6 +19,7 @@
     <Folder Include="Task_4\" />
     <Folder Include="Task_5\" />
     <Folder Include="Task_7\" />
+    <Folder Include="Task_6\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NUnit" Version="3.12.0" />

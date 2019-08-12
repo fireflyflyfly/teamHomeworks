@@ -4,6 +4,7 @@ using TeamHomeworks.Task_3;
 using TeamHomeworks.Task_4;
 using TeamHomeworks.Task_5;
 using TeamHomeworks.Task_7;
+using TeamHomeworks.Task_6;
 namespace TaskSelector
 {
     public class TaskRunner
@@ -21,7 +22,7 @@ namespace TaskSelector
                 }
                 else if (Convert.ToInt32(taskNumber) == 3)
                 {
-                    Task3Runner.RunTask3();  
+                    Task3Runner.RunTask3();
                 }
                 else if (Convert.ToInt32(taskNumber) == 4)
                 {
@@ -30,9 +31,9 @@ namespace TaskSelector
                 }
                 else if (Convert.ToInt32(taskNumber) == 5)
                 {
-                    TaskControl.Task5Selector(); 
+                    TaskControl.Task5Selector();
                 }
-                else if (Convert.ToInt16 (taskNumber) == 7) 
+                else if (Convert.ToInt16(taskNumber) == 7)
                 {
                     DictioanryHelper.FillDictionary();
                     DictioanryHelper.AddNewCountryToDictionary();
@@ -40,6 +41,10 @@ namespace TaskSelector
                     DictioanryHelper.SetTelenorSupported();
                     DictioanryHelper.PrintAllNonSupportedCountries();
                     DictioanryHelper.SaveChangesToFile();
+                }
+                else if (Convert.ToInt16(taskNumber) == 6)
+                {
+                    ChapletRunner.StartChaplet();
                 }
                 }
                 else 
