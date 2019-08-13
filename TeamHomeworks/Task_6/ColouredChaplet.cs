@@ -1,47 +1,55 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
 namespace TeamHomeworks.Task_6
 {
     public class ColouredChaplet : Chaplet<ColouredBulb>
     {
-        public ColouredChaplet() : base()
-        {
-            Console.WriteLine("\nPlease enter the number of light bulbs in your chaptet:");
-            int attempts = 3;
-            while (attempts != 0)
-            {
-                if (int.TryParse(Console.ReadLine(), out int length))
-                {
-                    for (int i = 0; i < length; i++)
-                    {
-                        ColouredBulb colouredBulb = BulbHelper.SetBulbColour();
-                        cplt.Add(colouredBulb);
-                    }
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("Incorrect input. Please use only integers.");
-                    attempts--;
-                }
+        public static List<Colour> colourList = Enum.GetValues(typeof(Colour)).Cast<Colour>().ToList();
 
-                if (attempts == 0)
-                {
-                    Console.WriteLine("You are out of attempts, the length of your chaplet has been defaulted to 10.");
-                    for (int i = 0; i < 10; i++)
-                    {
-                        ColouredBulb colouredBulb = BulbHelper.SetBulbColour();
-                        cplt.Add(colouredBulb);
-                    }
-                }
+        public ColouredChaplet(int size) : base(size)
+        {
+        }
+
+        public override void FillChaplet()
+        {
+            for (int i = 0; i < cplt.Length; i++)
+            {
+                ColouredBulb colouredBulb = new ColouredBulb();
+                cplt[i] = colouredBulb;
             }
+
+            SetBulbColour();
         }
 
         public override void PrintChaplet()
         {
+            int index = 0;
             foreach (ColouredBulb bulb in cplt)
             {
                 SetBulbState();
-                Console.WriteLine($"\n{cplt.IndexOf(bulb)}, Color: {Enum.GetName(typeof(Colour), bulb.BulbColour)}, Is lit: {bulb.IsLit}");
+                Console.WriteLine($"\n{index}, Color: {Enum.GetName(typeof(Colour), bulb.BulbColour)}, Is lit: {bulb.IsLit}");
+                index++;
+            }
+        }
+
+        public void SetBulbColour()
+        {
+            int index1 = 0;
+            int index2 = 0;
+            while (index2 != cplt.Length)
+            {
+                if (index1 != colourList.Count)
+                {
+                    cplt[index2].BulbColour = colourList[index1];
+                    index1++;
+                    index2++;
+                }
+                else
+                {
+                    index1 = 0;
+                }
             }
         }
     }

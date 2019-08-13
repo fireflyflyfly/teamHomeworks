@@ -3,45 +3,29 @@ namespace TeamHomeworks.Task_6
 {
     public class SimpleChaplet : Chaplet<SimpleBulb>
     {
-        public SimpleChaplet() : base()
+        public SimpleChaplet(int size) : base(size)
         {
-            Console.WriteLine("\nPlease enter the number of light bulbs in your chaptet:");
-            int attempts = 3;
-            while (attempts != 0)
-            {
-                if (int.TryParse(Console.ReadLine(), out int length))
-                {
-                    for (int i = 0; i < length; i++)
-                    {
-                        SimpleBulb simpleBulb = new SimpleBulb();
-                        cplt.Add(simpleBulb);
-                    }
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("Incorrect input. Please use only integers.");
-                    attempts--;
-                }
+        }
 
-                if (attempts == 0)
-                {
-                    Console.WriteLine("You are out of attempts, the length of your chaplet has been defaulted to 10.");
-                    for (int i = 0; i < 10; i++)
-                    {
-                        SimpleBulb simpleBulb = new SimpleBulb();
-                        cplt.Add(simpleBulb);
-                    }
-                }
+        public override void FillChaplet()
+        {
+
+            for (int i = 0; i < cplt.Length; i++)
+            {
+                SimpleBulb simpleBulb = new SimpleBulb();
+                cplt[i] = simpleBulb;
             }
         }
 
+
         public override void PrintChaplet()
         {
+            int index = 0;
             foreach (SimpleBulb bulb in cplt)
             {
                 SetBulbState();
-                Console.WriteLine($"\n{cplt.IndexOf(bulb)}, Is lit: {bulb.IsLit}");
+                Console.WriteLine($"\n{index}, Is lit: {bulb.IsLit}");
+                index++;
             }
         }
     }

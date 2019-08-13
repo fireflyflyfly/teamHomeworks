@@ -4,23 +4,23 @@ using System.Linq;
 
 namespace TeamHomeworks.Task_6
 {
-    public abstract class Chaplet<T> where T : SimpleBulb
+    public abstract class Chaplet<T>
+        where T : SimpleBulb
     {
-        protected List<T> cplt;
-        public Chaplet()
+        protected T[] cplt;
+
+        public Chaplet(int size)
         {
-            cplt = new List<T>();
+            cplt = new T[size];
         }
 
-        public void Add(SimpleBulb bulb)
-        {
-            bulb.IsLit = false;
-        }
+        public abstract void FillChaplet();
+        public abstract void PrintChaplet();
 
         protected void SetBulbState()
         {
             var currentMinute = DateTime.Now.Minute;
-            for (int i = 0; i < cplt.Count; i++)
+            for (int i = 0; i < cplt.Length; i++)
             {
                 if (i % 2 == 0 && currentMinute % 2 == 0)
                 {
@@ -32,14 +32,5 @@ namespace TeamHomeworks.Task_6
                 }
             }
         }
-
-        public abstract void PrintChaplet();
-
-
-        //public SimpleBulb[] chaplet;
-        //chaplet creation logic should be in constructor, generic should also be here.
-        //public Chaplet(SimpleBulb bulb)
-        //{
-        //}
     }
 }

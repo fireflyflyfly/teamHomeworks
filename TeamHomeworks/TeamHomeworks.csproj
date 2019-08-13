@@ -12,6 +12,7 @@
     <Compile Remove="Square.cs" />
     <Compile Remove="Tasks_1_&amp;_2.cs" />
     <Compile Remove="Task_6\ColourAttributes.cs" />
+    <Compile Remove="Task_6\BulbHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Tasks_1&amp;2\" />

@@ -5,10 +5,12 @@ namespace TeamHomeworks.Task_6
     {
         public static void StartChaplet()
         {
-            var simpleChap = new SimpleChaplet();
+            var simpleChap = new SimpleChaplet(ChapletHelper.GetChapletLength());
+            simpleChap.FillChaplet();
             simpleChap.PrintChaplet();
 
-            var colouerdChap = new ColouredChaplet();
+            var colouerdChap = new ColouredChaplet(ChapletHelper.GetChapletLength());
+            colouerdChap.FillChaplet();
             colouerdChap.PrintChaplet();
         }
     }
