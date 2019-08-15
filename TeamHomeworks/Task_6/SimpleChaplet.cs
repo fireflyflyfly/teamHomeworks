@@ -7,13 +7,13 @@ namespace TeamHomeworks.Task_6
         {
         }
 
-        public override void FillChaplet()
+        public override void FillChaplet(int length)
         {
-
-            for (int i = 0; i < cplt.Length; i++)
+            cplt = new SimpleBulb[length];
+            for (int i = 0; i < length; i++)
             {
-                SimpleBulb simpleBulb = new SimpleBulb();
-                cplt[i] = simpleBulb;
+
+                cplt[i] = new SimpleBulb(); 
             }
         }
 

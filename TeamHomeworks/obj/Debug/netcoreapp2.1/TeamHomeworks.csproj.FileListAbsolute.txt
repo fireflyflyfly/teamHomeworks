@@ -8,3 +8,4 @@
 /Users/yegorabramenkov/Projects/TeamHomeworks/TeamHomeworks/obj/Debug/netcoreapp2.1/TeamHomeworks.AssemblyInfo.cs
 /Users/yegorabramenkov/Projects/TeamHomeworks/TeamHomeworks/obj/Debug/netcoreapp2.1/TeamHomeworks.dll
 /Users/yegorabramenkov/Projects/TeamHomeworks/TeamHomeworks/obj/Debug/netcoreapp2.1/TeamHomeworks.pdb
+/Users/yegorabramenkov/Projects/TeamHomeworks/TeamHomeworks/obj/Debug/netcoreapp2.1/TeamHomeworks.csprojAssemblyReference.cache

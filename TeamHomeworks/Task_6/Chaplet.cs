@@ -9,12 +9,9 @@ namespace TeamHomeworks.Task_6
     {
         protected T[] cplt;
 
-        public Chaplet(int size)
-        {
-            cplt = new T[size];
-        }
+        public Chaplet(int size) => FillChaplet(size);
 
-        public abstract void FillChaplet();
+        public abstract void FillChaplet(int length);
         public abstract void PrintChaplet();
 
         protected void SetBulbState()
@@ -22,13 +19,10 @@ namespace TeamHomeworks.Task_6
             var currentMinute = DateTime.Now.Minute;
             for (int i = 0; i < cplt.Length; i++)
             {
-                if (i % 2 == 0 && currentMinute % 2 == 0)
+                if (i % 2 == currentMinute % 2)
                 {
                     cplt[i].IsLit = true;
-                }
-                else if (i % 2 != 0 && currentMinute % 2 != 0)
-                {
-                    cplt[i].IsLit = true;
+
                 }
             }
         }

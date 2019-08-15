@@ -12,9 +12,10 @@ namespace TeamHomeworks.Task_6
         {
         }
 
-        public override void FillChaplet()
+        public override void FillChaplet(int length)
         {
-            for (int i = 0; i < cplt.Length; i++)
+            cplt = new ColouredBulb[length];
+            for (int i = 0; i < length; i++)
             {
                 ColouredBulb colouredBulb = new ColouredBulb();
                 cplt[i] = colouredBulb;
@@ -36,19 +37,19 @@ namespace TeamHomeworks.Task_6
 
         public void SetBulbColour()
         {
-            int index1 = 0;
-            int index2 = 0;
-            while (index2 != cplt.Length)
+            int colourIndex = 0;
+            int chapletIndex = 0;
+            while (chapletIndex != cplt.Length)
             {
-                if (index1 != colourList.Count)
+                if (colourIndex != colourList.Count)
                 {
-                    cplt[index2].BulbColour = colourList[index1];
-                    index1++;
-                    index2++;
+                    cplt[chapletIndex].BulbColour = colourList[colourIndex];
+                    colourIndex++;
+                    chapletIndex++;
                 }
                 else
                 {
-                    index1 = 0;
+                    colourIndex = 0;
                 }
             }
         }
