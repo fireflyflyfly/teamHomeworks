@@ -2,25 +2,20 @@
   <MonoDevelop.Ide.ItemProperties.TeamHomeworks PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="TeamHomeworks/Task_6/ChapletRunner.cs" Line="14" Column="41" />
-      <File FileName="TeamHomeworks/Task_6/Chaplet.cs" Line="26" Column="18" />
-      <File FileName="TeamHomeworks/Task_6/SimpleChaplet.cs" Line="29" Column="14" />
-      <File FileName="TeamHomeworks/Task_6/ColouredChaplet.cs" Line="11" Column="16" />
-      <File FileName="TeamHomeworks/Task_6/ChapletHelper.cs" Line="1" Column="1" />
-      <File FileName="TeamHomeworks/Task_6/ColouredBulb.cs" Line="6" Column="30" />
-      <File FileName="TeamHomeworks/Task_6/SimpleBulb.cs" Line="4" Column="28" />
-      <File FileName="TeamHomeworks/Runner.cs" Line="1" Column="1" />
+      <File FileName="TeamHomeworks/Task_8/Task_8_Launcher.cs" Line="39" Column="46" />
+      <File FileName="TeamHomeworks/Task_8/Shipment.cs" Line="33" Column="71" />
+      <File FileName="TeamHomeworks/Task_8/Order.cs" Line="40" Column="90" />
+      <File FileName="TeamHomeworks/Task_8/Customer.cs" Line="30" Column="57" />
+      <File FileName="TeamHomeworks/TaskSelector.cs" Line="50" Column="58" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="TeamHomeworks" expanded="True">
             <Node name="TeamHomeworks" expanded="True">
-              <Node name="Task_5" expanded="True" />
-              <Node name="Task_6" expanded="True">
-                <Node name="ChapletRunner.cs" selected="True" />
+              <Node name="Task_8" expanded="True">
+                <Node name="Task_8_Launcher.cs" selected="True" />
               </Node>
-              <Node name="Task_7" expanded="True" />
             </Node>
           </Node>
         </State>

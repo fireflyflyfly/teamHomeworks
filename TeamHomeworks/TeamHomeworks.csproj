@@ -21,6 +21,7 @@
     <Folder Include="Task_5\" />
     <Folder Include="Task_7\" />
     <Folder Include="Task_6\" />
+    <Folder Include="Task_8\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NUnit" Version="3.12.0" />

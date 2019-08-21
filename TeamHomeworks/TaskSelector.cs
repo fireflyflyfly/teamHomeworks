@@ -5,6 +5,7 @@ using TeamHomeworks.Task_4;
 using TeamHomeworks.Task_5;
 using TeamHomeworks.Task_7;
 using TeamHomeworks.Task_6;
+using TeamHomeworks.Task_8;
 namespace TaskSelector
 {
     public class TaskRunner
@@ -46,6 +47,11 @@ namespace TaskSelector
                 {
                     ChapletRunner.StartChaplet();
                 }
+                else if (Convert.ToInt16(taskNumber) == 8)
+                {
+                    Task_8_Launcher.LounchTask8();
+                }
+
                 }
                 else 
                 {
